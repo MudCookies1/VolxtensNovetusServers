@@ -35,8 +35,9 @@ Start a Novetus server using Docker:
 ```bash
 docker run -d \
   --name=novetus \
-  --rm \
+  --restart always \
   -p 53640:53640/udp \
+  -p 127.0.0.1:3000:3000 `# Optional: Track connected players on the server, it is heavely recommended to put this behind a reverse proxy.` \
   -e CLIENT=2012M `# Optional: Select the client version (default: 2012M)` \
   -e MAXPLAYERS=12 `# Optional: Set maximum number of players` \
   -e PORT=53640 `# Optional: Change the server port` \
