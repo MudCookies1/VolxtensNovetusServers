@@ -1,5 +1,7 @@
-# Launcher
+# Python
+__pycache__
 
+# Launcher
 Launcher/data
 Launcher/.itch.toml
 Launcher/Newtonsoft.Json.dll
